@@ -35,7 +35,7 @@ class Transaction {
 	public String toString() {
         return type + " : " + amount;
     }
-}
+}//class transaction ends here
 abstract class Account {
 
     int accNo;
@@ -174,13 +174,10 @@ abstract class Account {
     public String toString() {
         return "AccNo:" + accNo + " Name:" + name + " Balance:" + balance;
     }
-}
+}//class Account ends here
 
 
 
-
-
-// Current Account
 class CurrentAccount extends Account {
 
     static double overdraftLimit = 10000;
@@ -222,11 +219,9 @@ class CurrentAccount extends Account {
                " Balance:" + balance +
                " OverdraftLimit:" + overdraftLimit;
     }
-}
+}//current account ends here
 
 
-
-//Controller
 class BankController {
 
     BankDAO bd = new BankDAO();
@@ -300,9 +295,7 @@ class BankController {
             System.out.println(arr[i]);
         }
     }
-}
-
-
+}//bank controller ends here
 
 
 class CaseTest {
@@ -312,4 +305,5 @@ class CaseTest {
         BankView bv = new BankView(bc);
         bv.showOptions();
     }
-}
+}//class test ends here
+
